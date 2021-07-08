@@ -11,6 +11,7 @@ import androidx.room.paging.LimitOffsetDataSource;
 import androidx.room.util.CursorUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.raywenderlich.android.redditclone.models.RedditPost;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Integer;
 import java.lang.Object;
@@ -18,6 +19,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
@@ -61,20 +63,20 @@ public final class RedditPostsDao_Impl implements RedditPostsDao {
   }
 
   @Override
-  public Object savePosts(final List<RedditPost> arg0, final Continuation<? super Unit> arg1) {
+  public Object savePosts(final List<RedditPost> redditPosts, final Continuation<? super Unit> p1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
         __db.beginTransaction();
         try {
-          __insertionAdapterOfRedditPost.insert(arg0);
+          __insertionAdapterOfRedditPost.insert(redditPosts);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, p1);
   }
 
   @Override
@@ -84,7 +86,7 @@ public final class RedditPostsDao_Impl implements RedditPostsDao {
     return new DataSource.Factory<Integer, RedditPost>() {
       @Override
       public LimitOffsetDataSource<RedditPost> create() {
-        return new LimitOffsetDataSource<RedditPost>(__db, _statement, false , "redditPosts") {
+        return new LimitOffsetDataSource<RedditPost>(__db, _statement, false, false , "redditPosts") {
           @Override
           protected List<RedditPost> convertRows(Cursor cursor) {
             final int _cursorIndexOfKey = CursorUtil.getColumnIndexOrThrow(cursor, "key");
@@ -96,13 +98,25 @@ public final class RedditPostsDao_Impl implements RedditPostsDao {
             while(cursor.moveToNext()) {
               final RedditPost _item;
               final String _tmpKey;
-              _tmpKey = cursor.getString(_cursorIndexOfKey);
+              if (cursor.isNull(_cursorIndexOfKey)) {
+                _tmpKey = null;
+              } else {
+                _tmpKey = cursor.getString(_cursorIndexOfKey);
+              }
               final String _tmpTitle;
-              _tmpTitle = cursor.getString(_cursorIndexOfTitle);
+              if (cursor.isNull(_cursorIndexOfTitle)) {
+                _tmpTitle = null;
+              } else {
+                _tmpTitle = cursor.getString(_cursorIndexOfTitle);
+              }
               final int _tmpScore;
               _tmpScore = cursor.getInt(_cursorIndexOfScore);
               final String _tmpAuthor;
-              _tmpAuthor = cursor.getString(_cursorIndexOfAuthor);
+              if (cursor.isNull(_cursorIndexOfAuthor)) {
+                _tmpAuthor = null;
+              } else {
+                _tmpAuthor = cursor.getString(_cursorIndexOfAuthor);
+              }
               final int _tmpCommentCount;
               _tmpCommentCount = cursor.getInt(_cursorIndexOfCommentCount);
               _item = new RedditPost(_tmpKey,_tmpTitle,_tmpScore,_tmpAuthor,_tmpCommentCount);
@@ -113,5 +127,9 @@ public final class RedditPostsDao_Impl implements RedditPostsDao {
         };
       }
     }.asPagingSourceFactory().invoke();
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

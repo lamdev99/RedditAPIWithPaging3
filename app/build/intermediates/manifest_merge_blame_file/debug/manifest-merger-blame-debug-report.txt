@@ -19,7 +19,7 @@
 14        android:allowBackup="true"
 14-->D:\Documents\zAndroid\RW-RedditClone\starter\app\src\main\AndroidManifest.xml:8:5-31
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.5.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\fd9b0a70e23b8984338bcea57d9a2b92\core-1.5.0-alpha02\AndroidManifest.xml:24:18-86
+15-->[androidx.core:core:1.7.0-alpha01] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\f3ace163c81c2cae044b00d7030cdfe6\core-1.7.0-alpha01\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
 17-->D:\Documents\zAndroid\RW-RedditClone\starter\app\src\main\AndroidManifest.xml:9:5-39
@@ -48,24 +48,35 @@
 29        </activity>
 30
 31        <service
-31-->[androidx.room:room-runtime:2.3.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\08d3b1f51c898cefaef702ffe09f0855\room-runtime-2.3.0-alpha02\AndroidManifest.xml:25:9-28:40
+31-->[androidx.room:room-runtime:2.4.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\46798a37cfd6d035f32eec1a873cce58\room-runtime-2.4.0-alpha03\AndroidManifest.xml:25:9-28:40
 32            android:name="androidx.room.MultiInstanceInvalidationService"
-32-->[androidx.room:room-runtime:2.3.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\08d3b1f51c898cefaef702ffe09f0855\room-runtime-2.3.0-alpha02\AndroidManifest.xml:26:13-74
+32-->[androidx.room:room-runtime:2.4.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\46798a37cfd6d035f32eec1a873cce58\room-runtime-2.4.0-alpha03\AndroidManifest.xml:26:13-74
 33            android:directBootAware="true"
-33-->[androidx.room:room-runtime:2.3.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\08d3b1f51c898cefaef702ffe09f0855\room-runtime-2.3.0-alpha02\AndroidManifest.xml:27:13-43
+33-->[androidx.room:room-runtime:2.4.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\46798a37cfd6d035f32eec1a873cce58\room-runtime-2.4.0-alpha03\AndroidManifest.xml:27:13-43
 34            android:exported="false" />
-34-->[androidx.room:room-runtime:2.3.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\08d3b1f51c898cefaef702ffe09f0855\room-runtime-2.3.0-alpha02\AndroidManifest.xml:28:13-37
+34-->[androidx.room:room-runtime:2.4.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\46798a37cfd6d035f32eec1a873cce58\room-runtime-2.4.0-alpha03\AndroidManifest.xml:28:13-37
 35
 36        <provider
-36-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\4c63f8b33708a187655e5605902174d7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-37-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\4c63f8b33708a187655e5605902174d7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-38            android:authorities="com.raywenderlich.android.redditclone.lifecycle-process"
-38-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\4c63f8b33708a187655e5605902174d7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-39            android:exported="false"
-39-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\4c63f8b33708a187655e5605902174d7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-40            android:multiprocess="true" />
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\4c63f8b33708a187655e5605902174d7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-41    </application>
-42
-43</manifest>
+36-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:26:9-34:20
+37            android:name="androidx.startup.InitializationProvider"
+37-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:27:13-67
+38            android:authorities="com.raywenderlich.android.redditclone.androidx-startup"
+38-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:28:13-68
+39            android:exported="false" >
+39-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:29:13-37
+40            <meta-data
+40-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:31:13-33:52
+41                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+41-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:32:17-75
+42                android:value="androidx.startup" />
+42-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\3c89148aca3f589ef79d06fe3acf94aa\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:33:17-49
+43            <meta-data
+43-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\edc9e971fba5eeea5b46129f15389e04\jetified-lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:31:13-33:52
+44                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+44-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\edc9e971fba5eeea5b46129f15389e04\jetified-lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:32:17-78
+45                android:value="androidx.startup" />
+45-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\lamit\.gradle\caches\transforms-2\files-2.1\edc9e971fba5eeea5b46129f15389e04\jetified-lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:33:17-49
+46        </provider>
+47    </application>
+48
+49</manifest>

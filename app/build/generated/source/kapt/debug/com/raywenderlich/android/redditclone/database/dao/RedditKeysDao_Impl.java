@@ -10,12 +10,14 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.raywenderlich.android.redditclone.models.RedditKeys;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
@@ -88,9 +90,17 @@ public final class RedditKeysDao_Impl implements RedditKeysDao {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpAfter;
-            _tmpAfter = _cursor.getString(_cursorIndexOfAfter);
+            if (_cursor.isNull(_cursorIndexOfAfter)) {
+              _tmpAfter = null;
+            } else {
+              _tmpAfter = _cursor.getString(_cursorIndexOfAfter);
+            }
             final String _tmpBefore;
-            _tmpBefore = _cursor.getString(_cursorIndexOfBefore);
+            if (_cursor.isNull(_cursorIndexOfBefore)) {
+              _tmpBefore = null;
+            } else {
+              _tmpBefore = _cursor.getString(_cursorIndexOfBefore);
+            }
             _item = new RedditKeys(_tmpId,_tmpAfter,_tmpBefore);
             _result.add(_item);
           }
@@ -101,5 +111,9 @@ public final class RedditKeysDao_Impl implements RedditKeysDao {
         }
       }
     }, p0);
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }
