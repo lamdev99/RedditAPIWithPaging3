@@ -1,0 +1,16 @@
+com/raywenderlich/android/redditclone/BuildConfig.java
+ com.raywenderlich.android.redditclone.BuildConfig
+com/raywenderlich/android/redditclone/database/dao/RedditPostsDao_Impl.java
+ com.raywenderlich.android.redditclone.database.dao.RedditPostsDao_Impl
+ com.raywenderlich.android.redditclone.database.dao.RedditPostsDao_Impl$1
+ com.raywenderlich.android.redditclone.database.dao.RedditPostsDao_Impl$2
+ com.raywenderlich.android.redditclone.database.dao.RedditPostsDao_Impl$3
+ com.raywenderlich.android.redditclone.database.dao.RedditPostsDao_Impl$3$1
+com/raywenderlich/android/redditclone/database/RedditDatabase_Impl.java
+ com.raywenderlich.android.redditclone.database.RedditDatabase_Impl
+ com.raywenderlich.android.redditclone.database.RedditDatabase_Impl$1
+com/raywenderlich/android/redditclone/database/dao/RedditKeysDao_Impl.java
+ com.raywenderlich.android.redditclone.database.dao.RedditKeysDao_Impl
+ com.raywenderlich.android.redditclone.database.dao.RedditKeysDao_Impl$1
+ com.raywenderlich.android.redditclone.database.dao.RedditKeysDao_Impl$2
+ com.raywenderlich.android.redditclone.database.dao.RedditKeysDao_Impl$3
